@@ -1,8 +1,11 @@
 # Myntra Clone
 
-This is a responsive clone of the popular e-commerce website Myntra. It includes a homepage with a navigation bar, search bar, main banner, category sections, and a footer. The project is built using HTML and CSS.
+A **responsive clone** of the popular e-commerce website **Myntra**, built using **HTML** and **CSS**.  
+It includes a homepage with navigation, search bar, main banner, categories, and footer.
 
-## Table of Contents
+---
+
+## 📑 Table of Contents
 
 - [Demo](#demo)
 - [Features](#features)
@@ -16,47 +19,60 @@ This is a responsive clone of the popular e-commerce website Myntra. It includes
 - [Contact](#contact)
 - [License](#license)
 
-## Demo
+---
 
-You can view a live demo of the project [here](https://priyanshuksharma.github.io/MyntraClone/).
+## 🚀 Demo
 
-## Features
+- **GitHub Pages**: [Live Demo](https://priyanshuksharma.github.io/MyntraClone/)  
+- **AWS Hosting**: [myntraclonebypriyanshu.s3-website.ap-south-1.amazonaws.com](http://myntraclonebypriyanshu.s3-website.ap-south-1.amazonaws.com/)  
+- **Netlify Hosting**: [majestic-faloodeh-224c28.netlify.app](https://majestic-faloodeh-224c28.netlify.app/)  
 
-- Responsive navigation bar with links to different sections.
-- Search bar with placeholder text.
-- Main banner image.
-- Category sections with images and hover effects.
-- Footer with multiple columns for different links.
+---
 
-## Technologies Used
+## ✨ Features
 
-- HTML5
-- CSS3
+- Responsive **navigation bar** with section links.  
+- **Search bar** with placeholder text.  
+- **Main banner image** for promotions.  
+- **Category sections** with images and hover effects.  
+- **Footer** with multiple columns for useful links.  
 
-## Getting Started
+---
 
-To get a local copy up and running follow these simple steps.
+## 🛠️ Technologies Used
 
-### Prerequisites
+- **HTML5**  
+- **CSS3**
 
-You need a modern web browser to view the project.
+---
 
-### Installation
+## 🏁 Getting Started
 
-1. Clone the repo
+Follow these steps to run the project locally:
+
+### ✅ Prerequisites
+- A modern web browser (Chrome, Edge, Firefox, Safari).
+
+### 📥 Installation
+1. Clone the repository:
    ```sh
    git clone https://github.com/PriyanshuKSharma/MyntraClone.git
    ```
-2. Navigate to the project directory
+
+2. Navigate into the project directory:
+
    ```sh
    cd MyntraClone
    ```
-3. Open `index.html` in your web browser
+3. Open `index.html` in your browser:
+
    ```sh
    open index.html
    ```
 
-## Folder Structure
+---
+
+## 📂 Folder Structure
 
 ```
 myntra-clone/
@@ -74,72 +90,55 @@ myntra-clone/
 ├── main.tf
 ├── index.html
 └── index.css
-
 ```
 
-## Contributing
+---
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## 🤝 Contributing
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Contributions are welcome! To contribute:
 
-## AWS Implementation
+1. Fork the repo.
+2. Create your feature branch:
 
-Step 1: Create an AWS Account
-If you don’t already have an AWS account, sign up at AWS.
+   ```sh
+   git checkout -b feature/AmazingFeature
+   ```
+3. Commit your changes:
 
-Step 2: Choose a Hosting Option
-There are multiple ways to host a website on AWS, depending on your requirements. The most common options are:
+   ```sh
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. Push to your branch:
 
-1. Amazon S3 (Static Websites): For static websites (HTML, CSS, JS).
-2. Amazon EC2 (Dynamic Websites): For dynamic websites requiring server-side processing.
-3. AWS Amplify (Web and Mobile Apps): Simplifies the process of deploying full-stack web and mobile apps.
-4. Amazon Lightsail: Simplifies the setup of virtual private servers.
+   ```sh
+   git push origin feature/AmazingFeature
+   ```
+5. Open a Pull Request.
 
-Step 3: Set Up a Static Website with Amazon S3
-This is suitable for hosting simple static websites.
+---
 
-Create a Bucket:
+## ☁️ AWS Implementation
 
-Open the [@Amazon S3 console](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin).
-1. Click on “Create bucket”.
-2. Provide a bucket name (this should be unique across all of AWS).
-3. Choose a region and configure other settings as per your needs.
-4. Click on “Create bucket” at the bottom.
+### Step 1: Create an AWS Account
 
-Upload Your Website Files:
+* Sign up at [AWS](https://aws.amazon.com/).
 
-1. Click on your newly created bucket.
-2. Click on the “Upload” button.
-3. Add your website files (HTML, CSS, JS, images, etc.).
-4. Click on “Upload” to start the upload process.
+### Step 2: Choose Hosting Option
 
-Enable Static Website Hosting:
+* **Amazon S3** → Static websites.
+* **Amazon EC2** → Dynamic apps.
+* **AWS Amplify** → Full-stack deployment.
+* **Amazon Lightsail** → VPS setup.
 
-1. Click on your bucket and go to the “Properties” tab.
-2. Scroll down to the “Static website hosting” section.
-3. Select “Use this bucket to host a website”.
-4. Specify the index document (e.g., index.html) and an error document (e.g., error.html).
-5. Save the changes.
+### Step 3: Static Website Hosting with Amazon S3
 
-Make Your Bucket Public:
+1. Create a **bucket** in [S3 Console](https://console.aws.amazon.com/console/home).
+2. Upload website files (`index.html`, `index.css`, images, etc.).
+3. Enable **Static website hosting** in bucket properties.
+4. Add a **Bucket Policy** for public access:
 
-Go to the “Permissions” tab.
-
-Edit the “Bucket policy” to allow public access. You can use the following policy (replace YOUR-BUCKET-NAME with your bucket name):
-
-## Setting S3 Bucket Policy
-
-To set the S3 bucket policy, use the following bash script:
-
-```
-#Go to the “Permissions” tab.
-#Edit the “Bucket policy” to allow public access. You can use the following policy (replace YOUR-BUCKET-NAME with your bucket name):
-
+```json
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -153,22 +152,20 @@ To set the S3 bucket policy, use the following bash script:
   ]
 }
 ```
-Access Your Website:
 
-The website will be available at the bucket’s endpoint, which you can find in the “Static website hosting” section.
+5. Access the website via the bucket endpoint.
 
 ---
 
-## Terraform Deployment
+## ⚙️ Terraform Deployment
 
-This project includes Terraform configuration to automate the deployment of the website to an AWS S3 bucket.
+This project includes a `main.tf` for automating deployment.
 
-### Steps to Deploy with Terraform
+### Steps:
 
-1. Ensure you have Terraform installed on your machine.
-2. Configure your AWS credentials for Terraform to access your AWS account.
-3. Navigate to the project directory containing the `main.tf` file.
-4. Run the following commands:
+1. Install Terraform.
+2. Configure AWS credentials.
+3. Run:
 
 ```sh
 terraform init
@@ -176,64 +173,46 @@ terraform plan
 terraform apply
 ```
 
-5. Terraform will create an S3 bucket, configure it for static website hosting, set the appropriate bucket policy, and upload all the website files to the bucket.
-6. After successful deployment, you can access your website using the S3 bucket website endpoint.
+Terraform will:
 
-This automation simplifies the deployment process and ensures your website is consistently and reliably hosted on AWS.
+* Create an S3 bucket.
+* Configure static hosting.
+* Apply the public bucket policy.
+* Upload files automatically.
 
 ---
 
-## Netlify Deployment
-
-To deploy this project on **Netlify**, follow these steps:
+## 🌐 Netlify Deployment
 
 ### Prerequisites
-- A GitHub account.
-- A Netlify account (sign up at [Netlify](https://www.netlify.com/)).
 
-### Steps to Deploy
-1. **Push Your Code to GitHub**:
-   Ensure your repository is up to date and pushed to GitHub.
+* GitHub account.
+* Netlify account ([Sign up here](https://www.netlify.com/)).
 
-2. **Login to Netlify**:
-   - Go to [Netlify](https://www.netlify.com/) and log in using your credentials.
+### Steps:
 
-3. **Create a New Site**:
-   - On the Netlify dashboard, click on the **"Add new site"** button.
-   - Select **"Import an existing project"**.
-
-4. **Connect GitHub Repository**:
-   - Authorize Netlify to access your GitHub account.
-   - Select the `MyntraClone` repository.
-
-5. **Configure Build Settings**:
-   - Since this is a static website, no additional build commands are required. 
-   - Ensure the **Publish directory** is set to the root directory (`/`).
-
-6. **Deploy Your Site**:
-   - Click **"Deploy site"**.
-   - Netlify will begin deploying your project. Once the deployment is complete, you will see a live link to access your site.
-
-7. **Customize the Domain**:
-   - You can update the auto-generated domain to a custom domain by going to the **"Domain settings"** in Netlify.
-
-Your project is now live and accessible via the Netlify URL.
+1. Push code to GitHub.
+2. Login to Netlify → **"Add new site"** → **Import project**.
+3. Connect the `MyntraClone` repo.
+4. Set **Publish Directory** → `/` (root).
+5. Click **Deploy site**.
+6. Access via auto-generated link (customize if needed).
 
 ---
 
-## Contact
+## 📬 Contact
 
-Priyanshu K Sharma - [@Twitter](https://x.com/itspriyanshuks)  
-GitHub: [PriyanshuKSharma](https://github.com/PriyanshuKSharma)  
+👤 **Priyanshu K Sharma**
 
-Project Link: https://github.com/PriyanshuKSharma/MyntraClone.git  
-AWS Hosting: http://myntraclonebypriyanshu.s3-website.ap-south-1.amazonaws.com/  
-Netlify Hosting: https://majestic-faloodeh-224c28.netlify.app/
+* Twitter: [@itspriyanshuks](https://x.com/itspriyanshuks)
+* GitHub: [PriyanshuKSharma](https://github.com/PriyanshuKSharma)
+
+🔗 **Project Link**: [MyntraClone Repo](https://github.com/PriyanshuKSharma/MyntraClone.git)
 
 ---
 
-## License
+## 📜 License
 
-This project is not currently licensed.
+This project is **not currently licensed**.
 
 ---
